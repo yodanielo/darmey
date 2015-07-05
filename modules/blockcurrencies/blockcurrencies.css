@@ -1,0 +1,78 @@
+/* block top currencies */
+#header_right #currencies_block_top {
+    float:right;
+    margin: 0;
+    padding:2px 6px 1px 6px;
+    -moz-border-bottom-right-radius: 3px;
+    -moz-border-bottom-left-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background: none repeat scroll 0 0 #000;
+}
+#currencies_block_top{
+    display:inline-block;
+}
+#header_right #currencies_block_top p {
+    clear: left;
+    padding-right:20px;
+    font: 11px Arial,Verdana,sans-serif;
+    color: #ccc;
+    text-align: right;
+    background: url("img/block_languages_top_p_bg.png") no-repeat scroll right 1px transparent;
+}
+#currencies_block_top ul#first-currencies li {
+    float: left;
+    margin-right: 3px
+}
+#currencies_block_top ul#first-currencies li.selected {
+    float: left;
+}
+/*languages with jquery*/
+#setCurrency {
+    cursor: pointer;
+    position: relative;
+    background:#666;
+    width:115px;
+    height:24px;
+    line-height:24px;
+}
+#setCurrency p {
+    position: relative;
+    top: 0;
+    padding: 0;
+    padding-left: 10px;
+    color:#fff;
+}
+#setCurrency p.selected_currency{
+    background:url(../blocklanguages/img/combo-triangulo.jpg) no-repeat 95% 50%;
+}
+#setCurrency img {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#setCurrency .currencies_ul{
+    display:none;
+    z-index: 10000;
+    padding:10px;
+    list-style-type:none;
+}
+#setCurrency .currencies_ul li,
+#setCurrency .currencies_ul a{
+    color:#fff!important;
+    line-height: 24px;
+    clear: both;
+    overflow: hidden;
+}
+#setCurrency .currencies_ul_hover{
+    display:block;
+    z-index: 5000;
+    position:absolute;
+    /*right:6px;*/
+    padding:5px 10px;
+    height:auto;
+    /*width:20px;*/
+    background:#666;
+}
+/*#setCurrency .currencies_ul_hover a {color:#fff;}*/

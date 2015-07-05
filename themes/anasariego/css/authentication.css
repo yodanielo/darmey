@@ -1,0 +1,193 @@
+.cont_authfs {
+    width: 50%;
+    float: left;
+}
+.cont_authfs .authfs {
+    display: block;
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 10px;
+}
+#add_adress p,
+.account_creation p,
+.cont_authfs p {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
+.cont_authfs p.submit,
+.cont_authfs p.lost_password {
+    padding-left: 33%;
+}
+.cont_authfs p.lost_password a {
+    text-decoration: underline;
+}
+.account_creation p span,
+.cont_authfs p span {
+    float: left;
+    height: 18px;
+    width: 66%;
+}
+#account-creation_form p.radio span,
+#account-creation_form p.radio span,
+.account_creation p label,
+#add_adress p label,
+.cont_authfs p label{
+    float:left;
+    line-height: 20px;
+    width:33%;
+}
+.account_creation p input[type=text],
+.cont_authfs p input[type=text],
+.cont_authfs p input[type=password] {
+    float: left;
+    line-height: 20px;
+    height: 18px;
+    width: 99%;
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+/*.submitaddress input[type=submit]:hover,
+.cart_navigation input[type=submit]:hover,
+.cont_authfs p input[type=button]:hover,
+.cont_authfs p input[type=submit]:hover{
+    background:#333;
+}
+.submitaddress input[type=submit],
+.cart_navigation input[type=submit],
+.cont_authfs p input[type=button],
+.cont_authfs p input[type=submit]{
+    float:left;
+    line-height: 20px;
+    height: 20px;
+    background:#999;
+    width:50%;
+    color:white;
+    text-align: center;
+    cursor:pointer;
+    border-radius: 3px;
+}*/
+.submit2.submitaddress {
+    margin-top: 20px;
+}
+.submitaddress input[type=submit],
+.cart_navigation input[type=submit] {
+    max-width: 200px;
+    float:right;
+}
+.cart_navigation span {
+    float: left;
+    white-space: nowrap;
+    line-height: 20px;
+}
+.conformsec {
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+}
+#add_adress span.form_info ,
+#account-creation_form span.form_info {
+    display:block;
+    margin:5px 0 0 33%;
+    color:#666
+}
+
+/* create account ****************************************************************************** */
+#add_adress{}
+#account-creation_form {}
+
+        #add_adress fieldset,
+	#account-creation_form  fieldset {
+		padding:0 0 15px 0;
+		border:1px solid #ccc;
+		background:#f8f8f8;
+                border-top: none;
+                -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+                -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+	}
+                #add_adress h3,
+		#account-creation_form  h3 {
+			margin:0 0 15px 0;
+			padding:8px;
+			font-size:14px;
+			color:#fff;
+			text-transform:uppercase;
+			background:url(../img/bg_form_h3.png) repeat-x 0 0 #989898
+		}
+                #add_adress p.required,
+		#account-creation_form p.required {color:#222}
+                #add_adress p.required sup,
+		#account-creation_form p.required  sup {color:#990000}
+		
+		/*#account-creation_form p.radio span,
+		#account-creation_form p.text label,
+		#account-creation_form p.password label,
+		#account-creation_form p.select label,
+		#account-creation_form p.select span,
+		#account-creation_form p.textarea label {
+			display:inline-block;
+			padding:6px 15px;
+			width:230px;
+			font-size:14px;
+			text-align:right
+		}*/
+		#add_adress p.radio label,
+		#account-creation_form p.radio label {
+			float:none;
+			padding-right:10px;
+			width:auto;
+			font-size:14px
+		}
+		#add_adress p.checkbox label ,
+		#account-creation_form p.checkbox label {
+			float:none;
+			width:auto;
+			font-size:12px
+		}
+		#add_adress p.text input,
+		#add_adress p.password input,
+		#add_adress p.select input,
+		#account-creation_form p.text input,
+		#account-creation_form p.password input,
+		#account-creation_form p.select input {
+			padding:0 5px;
+			height:22px;
+			width:360px;/* 370 */
+			border:1px solid #ccc;
+			font-size: 12px;
+			color:#666
+		}
+		#add_adress p.checkbox input,
+		#account-creation_form p.checkbox input {
+			margin-left:260px;
+		}
+		#add_adress p.select select,
+		#account-creation_form p.select select {
+			margin-right:10px;
+			border:1px solid #ccc;
+			font-size: 12px;
+			color:#666
+		}
+                #ordermsg textarea,
+		#add_adress p.textarea textarea ,
+		#account-creation_form p.textarea textarea {
+			height:80px;
+			width:370px;
+			border:1px solid #ccc;
+			font-size: 12px;
+			color:#666
+		}
+		
+		#add_adress p.inline-infos ,
+		#account-creation_form p.inline-infos {
+			margin:0 0 0 33% !important;
+			font-size:12px;
+			color:#666;
+		}
+	
+	#center_column #add_adress p.cart_navigation ,
+	#center_column #account-creation_form p.cart_navigation {margin:20px 0}
+        
+        

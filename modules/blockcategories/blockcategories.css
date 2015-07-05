@@ -1,0 +1,27 @@
+#categories_block_left .tree li,
+#categories_block_left .tree {
+    display: block;
+    list-style: none;
+}
+#categories_block_left .tree li a:hover{
+    text-decoration: none;
+}
+#categories_block_left .tree li a {
+    font-size: 30px;
+    line-height: 120%;
+    color: #f3f3f3;
+    text-shadow: 0 1px 4px rgba(0,0,0,.4); 
+}
+#categories_block_left .tree li a.selected {
+    background: #999;
+    border-radius: 3px;
+    padding: 0px 5px;
+    margin-left: -5px;
+}
+#categories_block_left .tree li ul{
+    padding-left: 20px;
+    display:none;
+}
+#categories_block_left .tree li li a {
+    font-size: 20px;
+}

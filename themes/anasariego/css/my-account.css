@@ -1,0 +1,46 @@
+#my-account  #left_column {display:none}
+#my-account #center_column {width:757px}
+#my-account #center_column h1 {margin-bottom:20px}
+
+#my-account #center_column h4 {
+	font-weight:normal;
+	font-size:12px;
+	color:#666
+}
+
+#my-account .myaccount_lnk_list {
+    list-style-type:none
+}
+#my-account .myaccount_lnk_list li {
+    font-size: 13px;
+    line-height: 25px;
+    width: 128px;
+    height: 168px;
+    display: inline-block;
+    position:relative;
+    padding: 0px;
+    margin-top: 5px;
+}
+#my-account p img.icon {
+	position:relative;
+	top:6px;
+	left:0
+}
+#my-account .myaccount_lnk_list span{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    color: #777777;
+    text-shadow: 0 1px 0 #ffffff;
+    font-weight: bold;
+    padding: 0px 5px;
+    font-size: 12px;
+    line-height: 20px;
+    display:block;
+    text-align: center;
+}
+#my-account .myaccount_lnk_list img.icon{
+    position:absolute;
+	top:0px;
+	left:0
+}

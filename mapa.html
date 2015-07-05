@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps JavaScript API v3 Example: Event Simple</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+		var locaciones=[
+			{
+				tipo:1,
+				direccion:'av mesones muro 115 - san miguel, lima - mañana a las 10am',
+				punto:[-12.07722, -77.09774],
+				referencia:'av los patriotas entre la cuadra 3 y 4',
+				url:'Alquilo habitaciones independientes. Baño propio, terma, cable. Alt. Cuadra 29 Av. La Marina. Llamar: 5783218 C.994999932',
+				precio:'450'
+			},
+			{
+				tipo:0,
+				direccion:'santa susana 275 - urb pando 3',
+				punto:'santa susana 275 - urb pando 3, lima',
+				referencia:'a 5cdras de la pucp, por la huaca culebra',
+				url:'http://urbania.clasificados.pe/alquiler-habitacion-pueblo-libre-lima-732757',
+				precio:'400'
+			},
+			{
+				tipo:0,
+				direccion:'calle renan elias mz A lt 13',
+				punto:'calle renan elias, san miguel, lima',
+				referencia:'a la altura de la clinica san gabriel',
+				url:'http://urbania.clasificados.pe/alquiler-habitacion-san-miguel-lima-739731',
+				precio:'400'
+			}/*,
+			{
+				tipo:0,
+				direccion:'',
+				punto:'',
+				referencia:'',
+				url:'',
+				precio:''
+			}*/
+		];
+		var mymarkers = new Array();
+		cargarLocaciones=function(map){
+			for(i=0;i<locaciones.length;i++){
+				b=locaciones[i];
+				if(b["tipo"]==0){//direccion
+					titulo=b["direccion"];
+					$.getJSON("http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address="+encodeURIComponent(b["punto"])+"&region=pe",function(res,nada){
+						ll=res.results[0].geometry.location;
+						var xx = new google.maps.Marker({
+							position: new google.maps.LatLng(ll.lat,ll.lng),
+							map: map,
+							title: titulo
+						});
+						mymarkers.push(xx);
+					});
+				}
+				else{//lat long
+					titulo=b["direccion"];
+					var xx = new google.maps.Marker({
+						position: new google.maps.LatLng(b["punto"][0],b["punto"][1]),
+						map: map,
+						title: titulo
+					});
+					mymarkers.push(xx);
+				}
+			}
+		}
+      function initialize() {
+        var mapOptions = {
+          zoom: 15,
+          center: new google.maps.LatLng(-12.064237, -77.145267),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+		cargarLocaciones(map);
+
+        
+
+        /*google.maps.event.addListener(map, 'center_changed', function() {
+          // 3 seconds after the center of the map has changed, pan back to the
+          // marker.
+          window.setTimeout(function() {
+            map.panTo(marker.getPosition());
+          }, 3000);
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          map.setZoom(8);
+          map.setCenter(marker.getPosition());
+        });*/
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body style="padding:0px; margin:0px;">
+    <div id="map-canvas" style="float:left; position:absolute;width:100%;height:100%;"></div>
+  </body>
+</html>
